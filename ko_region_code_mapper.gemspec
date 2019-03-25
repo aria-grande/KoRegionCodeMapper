@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email       = 'christina.ohari@gmail.com'
   spec.files       = [
     "lib/ko_region_code_mapper.rb",
-    "data/ko_region_20181231.csv"
+    "lib/data/ko_region_20181231.csv"
   ]
   spec.homepage    = 'https://github.com/aria-grande/KoRegionCodeMapper'
   spec.license     = 'MIT'
