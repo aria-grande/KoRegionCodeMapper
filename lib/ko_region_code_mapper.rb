@@ -1,3 +1,6 @@
+## encoding: utf-8
+$:.unshift File.dirname(__FILE__)
+
 require 'csv'
 
 class KoRegionCodeMapper
@@ -17,16 +20,16 @@ class KoRegionCodeMapper
 
   def initialize(opts = { filename: FILE_NAME, include_header: true, index_mapping: DATA_INDEX })
     if opts != nil && (opts[:filename].empty? || opts[:include_header].nil? || opts[:index_mapping].empty?)
-      raise Exception.new("[ERROR] Check opts parameter. It should include appropriate 'filename', 'include_header', 'index_mapping'.(given: #{opts})")
+      raise ArgumentError.new("[ERROR] Check opts parameter. It should include appropriate 'filename', 'include_header', 'index_mapping'.(given: #{opts})")
     end
 
     if opts[:index_mapping].class != Hash
-      raise Exception.new("[ERROR] Check opts[:index_mapping]. It should be hash consist of (key, value) presenting (attribute_name, index of column in table)")
+      raise ArgumentError.new("[ERROR] Check opts[:index_mapping]. It should be hash consist of (key, value) presenting (attribute_name, index of column in table)")
     end
 
     @index_map = opts[:index_mapping] || DATA_INDEX
 
-    file = CSV.read(opts[:filename] || FILE_NAME)
+    file = CSV.read(File.expand_path(File.dirname(__FILE__) + "/#{opts[:filename] || FILE_NAME}"))
     @headers = file.delete_at(0) if opts[:include_header] || true
     @data = file
   end

@@ -11,14 +11,15 @@ KoRegionCodeMapper 라이브러리는 행정기관코드<->행정구역분류코
 
 
 # Import
-Install the library via bash or Gemfile
+- bash를 통해서 설치
 ```bash
 gem install ko_region_code_mapper
 ```
 
+- (rails일 경우) Gemfile에 명시
 ```ruby
 # Gemfile
-gem 'ko_region_code_mapper'
+gem 'ko_region_code_mapper', git: 'https://github.com/aria-grande/KoRegionCodeMapper.git'
 ```
 
 
