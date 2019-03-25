@@ -41,7 +41,7 @@ class KoRegionCodeMapper
 
   def find_hcodes_by_sigungu_code(sigungu_code)
     row = find_by_sigungu_code(sigungu_code)
-    row.map { |d| d[@index_map[:hcode]] }
+    row.map { |d| d[@index_map[:hcode]].to_s }
   end
 
   private
