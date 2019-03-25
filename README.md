@@ -4,8 +4,9 @@
 KoRegionCodeMapper 라이브러리는 행정기관코드<->행정구역분류코드 등 데이터 간의 매핑 인터페이스를 제공한다.
 
 **For Ruby**
+[![Gem Version](https://badge.fury.io/rb/ko_region_code_mapper.svg)](https://badge.fury.io/rb/ko_region_code_mapper)
 
-[![ruby](images/ruby.png)ko_region_code_mapper](https://rubygems.org/gems/ko_region_code_mapper)
+[![ruby](images/ruby.png) ko_region_code_mapper](https://rubygems.org/gems/ko_region_code_mapper)
 
 ## Dataset
 
