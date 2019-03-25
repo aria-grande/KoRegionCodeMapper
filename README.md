@@ -26,15 +26,21 @@ gem install ko_region_code_mapper
 gem 'ko_region_code_mapper', git: 'https://github.com/aria-grande/KoRegionCodeMapper.git'
 ```
 
-
 # Features
 
 ## 행정구역코드로 시군구코드 값 찾기
-시군구코드는  행정동코드의 앞의 다섯자리이다.
+시군구코드는 행정동코드의 앞의 다섯자리이다.
 
 ```ruby
 mapper = KoRegionCodeMapper.new
-mapper.find_sigungu_code_by_hcode('4277025900')
+mapper.find_sigungu_code_by_hcode('1126062000') # "11070"
+```
+
+## 시군구코드(5자리)로 행정구역코드 값 찾기
+
+```ruby
+mapper = KoRegionCodeMapper.new
+mapper.find_hcodes_by_sigungu_code('11070') # ["1126000000", "1126052000", "1126054000", ..., "1126068000", "1126069000"]
 ```
 
 ### Usage
