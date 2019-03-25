@@ -40,7 +40,7 @@ class KoRegionCodeMapper
   end
 
   def find_hcode_by_sigungu_code(sigungu_code)
-    row = find_by_sigungu_code(sigungu_code)
+    row = find_by_sigungu_code(sigungu_code).first
     row[@index_map[:hcode]]
   end
 
