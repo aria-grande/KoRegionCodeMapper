@@ -4,6 +4,7 @@
 KoRegionCodeMapper 라이브러리는 행정기관코드<->행정구역분류코드 등 데이터 간의 매핑 인터페이스를 제공한다.
 
 **For Ruby**
+
 ![ruby](images/ruby.png)
 
 ## Dataset
@@ -46,4 +47,4 @@ mapper.find_sigungu_code_by_hcode('4277025900')
 
 # Issues
 
-이슈와 의견은 [깃헙 issue](https://github.com/aria-grande/KoRegionCodeMapper/issues)를 생성해주세요!
+이슈와 의견은 [깃헙 issue](https://github.com/aria-grande/KoRegionCodeMapper/issues)를 통해 생성 해주세요!
