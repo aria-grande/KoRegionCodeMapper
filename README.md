@@ -1,5 +1,7 @@
 # Introduction
-대한민국 행정구역분류에 따라, 각 시군구, 동별 행정구역분류코드와 행정기관코드, 법정동코드가 존재한다.이 라이브러리는 행정기관코드<->행정구역분류코드 등 데이터 간의 매핑 인터페이스를 제공한다.
+대한민국 행정구역분류에 따라, 각 시군구, 동별 행정구역분류코드와 행정기관코드, 법정동코드가 존재한다.
+
+KoRegionCodeMapper 라이브러리는 행정기관코드<->행정구역분류코드 등 데이터 간의 매핑 인터페이스를 제공한다.
 
 ## Dataset
 
@@ -8,6 +10,17 @@
 ![data_example.png](images/data_example.png)
 
 
+# Import
+Install the library via bash or Gemfile
+```bash
+gem install ko_region_code_mapper
+```
+
+```ruby
+# Gemfile
+gem 'ko_region_code_mapper'
+```
+
 
 # Features
 
@@ -15,7 +28,7 @@
 시군구코드는  행정동코드의 앞의 다섯자리이다.
 
 ```ruby
-mapper = KoreanRegionCodeMapper.new
+mapper = KoRegionCodeMapper.new
 mapper.find_sigungu_code_by_hcode('4277025900')
 ```
 
@@ -29,6 +42,4 @@ mapper.find_sigungu_code_by_hcode('4277025900')
 
 # Issues
 
-이슈와 의견은 깃헙 issue를 생성해주세요!
-
- 
+이슈와 의견은 [깃헙 issue](https://github.com/aria-grande/KoRegionCodeMapper/issues)를 생성해주세요!

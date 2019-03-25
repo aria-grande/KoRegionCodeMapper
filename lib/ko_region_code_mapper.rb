@@ -1,7 +1,7 @@
 require 'csv'
 
-class KoreanRegionCodeMapper
-  FILE_NAME = '../data/ko_region_20181231.csv'
+class KoRegionCodeMapper
+  FILE_NAME = 'data/ko_region_20181231.csv'
   DATA_INDEX = {
     :sido => 0,
     :sigungu => 1,
