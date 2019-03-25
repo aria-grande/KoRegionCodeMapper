@@ -5,7 +5,7 @@ KoRegionCodeMapper 라이브러리는 행정기관코드<->행정구역분류코
 
 **For Ruby**
 
-![ruby](images/ruby.png)
+[![ruby](images/ruby.png)ko_region_code_mapper](https://rubygems.org/gems/ko_region_code_mapper)
 
 ## Dataset
 
