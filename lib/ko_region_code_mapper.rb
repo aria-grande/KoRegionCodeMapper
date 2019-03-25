@@ -39,9 +39,9 @@ class KoRegionCodeMapper
     row[@index_map[:hcategory]]&.slice(0..4)
   end
 
-  def find_hcode_by_sigungu_code(sigungu_code)
-    row = find_by_sigungu_code(sigungu_code).first
-    row[@index_map[:hcode]]
+  def find_hcodes_by_sigungu_code(sigungu_code)
+    row = find_by_sigungu_code(sigungu_code)
+    row.map { |d| d[@index_map[:hcode]] }
   end
 
   private
