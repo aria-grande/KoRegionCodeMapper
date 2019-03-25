@@ -3,6 +3,9 @@
 
 KoRegionCodeMapper 라이브러리는 행정기관코드<->행정구역분류코드 등 데이터 간의 매핑 인터페이스를 제공한다.
 
+**For Ruby**
+![ruby](images/ruby.png)
+
 ## Dataset
 
 (2018.12.31 기준 데이터 base)
