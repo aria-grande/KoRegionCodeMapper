@@ -2,8 +2,8 @@
 
 Gem::Specification.new do |spec|
   spec.name        = "ko_region_code_mapper"
-  spec.version     = '0.0.2'
-  spec.date        = '2019-03-25'
+  spec.version     = '0.0.3'
+  spec.date        = '2019-03-27'
   spec.summary     = "Korean region code Mapper"
   spec.description = "Serve interfaces converting between multiple region codes"
   spec.authors     = ["Aree Oh"]
