@@ -20,11 +20,11 @@ class KoRegionCodeMapper
 
   def initialize(opts = { filename: FILE_NAME, include_header: true, index_mapping: DATA_INDEX })
     if opts != nil && (opts[:filename].empty? || opts[:include_header].nil? || opts[:index_mapping].empty?)
-      raise ArgumentError.new("[ERROR] Check opts parameter. It should include appropriate 'filename', 'include_header', 'index_mapping'.(given: #{opts})")
+      raise ArgumentError.new("Check opts parameter. It should include appropriate 'filename', 'include_header', 'index_mapping'.(given: #{opts})")
     end
 
     if opts[:index_mapping].class != Hash
-      raise ArgumentError.new("[ERROR] Check opts[:index_mapping]. It should be hash consist of (key, value) presenting (attribute_name, index of column in table)")
+      raise ArgumentError.new("Check opts[:index_mapping]. It should be hash consist of (key, value) presenting (attribute_name, index of column in table)")
     end
 
     @index_map = opts[:index_mapping] || DATA_INDEX
@@ -35,11 +35,15 @@ class KoRegionCodeMapper
   end
 
   def find_sigungu_code_by_hcode(hcode)
+    raise ArgumentError.new("The required parameter hcode cannot be nil or empty string.") if hcode.nil? || hcode.empty?
     row = find_by_hcode(hcode).first
+    return nil if row.nil?
+    
     row[@index_map[:hcategory]]&.slice(0..4)
   end
 
   def find_hcodes_by_sigungu_code(sigungu_code)
+    raise ArgumentError.new("The required parameter sigungu_code cannot be nil or empty string.") if sigungu_code.nil? || sigungu_code.empty?
     row = find_by_sigungu_code(sigungu_code)
     row.map { |d| d[@index_map[:hcode]].to_s }
   end

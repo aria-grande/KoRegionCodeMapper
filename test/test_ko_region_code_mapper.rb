@@ -19,4 +19,18 @@ class KoRegionCodeMapperTest < Minitest::Test
       assert code.start_with? '42770'
     end
   end
+
+  def test_raise_exception_when_parameter_is_missing
+    mapper = KoRegionCodeMapper.new
+
+    hcode = ''
+    assert_raises ArgumentError do
+      mapper.find_sigungu_code_by_hcode(hcode)
+    end
+
+    sigungu_code = nil
+    assert_raises ArgumentError do
+      mapper.find_hcodes_by_sigungu_code(sigungu_code)
+    end
+  end
 end
